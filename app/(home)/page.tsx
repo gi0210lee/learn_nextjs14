@@ -1,6 +1,6 @@
 import styles from "../../styles/home.module.css";
-import Movie from "../../components/movie";
-import { getMovies } from "../../apis";
+import Movie from "../components/movie";
+import { getMovies } from "../apis";
 
 export const metadata = {
   title: "Home",

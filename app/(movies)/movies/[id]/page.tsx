@@ -1,11 +1,11 @@
-import MovieVideos from "../../../../components/movie-videos";
-import { getMovie } from "../../../../apis";
+import MovieVideos from "../../../components/movie-videos";
+import { getMovie } from "../../../apis";
 import { Suspense } from "react";
-import LoadingBar from "../../../../components/loading-bar";
-import MovieInfo from "../../../../components/movie-info";
-import MovieCredits from "../../../../components/movie-credits";
-import MovieProviders from "../../../../components/movie-providers";
-import MovieSimilar from "../../../../components/movie-similar";
+import LoadingBar from "../../../components/loading-bar";
+import MovieInfo from "../../../components/movie-info";
+import MovieCredits from "../../../components/movie-credits";
+import MovieProviders from "../../../components/movie-providers";
+import MovieSimilar from "../../../components/movie-similar";
 
 export interface IParams {
   params: { id: string };
