@@ -1,7 +1,11 @@
 import { getVideos } from "../apis";
 import styles from "../styles/movie-videos.module.css";
 
-export default async function MovieVideos({ id }: { id: string }) {
+interface IMovieVideos {
+  id: string;
+}
+
+export default async function MovieVideos({ id }: IMovieVideos) {
   const videos = await getVideos(id);
   return (
     <div className={styles.container}>

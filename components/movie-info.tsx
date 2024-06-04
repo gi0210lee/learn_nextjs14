@@ -1,7 +1,11 @@
 import { getMovie } from "../apis";
 import styles from "../styles/movie-info.module.css";
 
-export default async function MovieInfo({ id }: { id: string }) {
+interface IMovieInfoPros {
+  id: string;
+}
+
+export default async function MovieInfo({ id }: IMovieInfoPros) {
   const movie = await getMovie(id);
   return (
     <div className={styles.container}>
