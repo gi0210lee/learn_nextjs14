@@ -10,15 +10,18 @@ export default async function MovieVideos({ id }: IMovieVideos) {
   const top4 = videos.slice(0, 4);
   return (
     <div className={styles.container}>
-      {top4.map((video) => (
-        <iframe
-          key={video.id}
-          src={`https://youtube.com/embed/${video.key}`}
-          allow="accelerator; autoplay; clipboard-write; encrypted-media; gyroscope; 
+      <div className={styles.title}>Videos</div>
+      <div className={styles.grid}>
+        {top4.map((video) => (
+          <iframe
+            key={video.id}
+            src={`https://youtube.com/embed/${video.key}`}
+            allow="accelerator; autoplay; clipboard-write; encrypted-media; gyroscope; 
           picture-in-picture"
-          title={video.name}
-        />
-      ))}
+            title={video.name}
+          />
+        ))}
+      </div>
     </div>
   );
 }
