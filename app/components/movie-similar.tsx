@@ -21,7 +21,9 @@ export default async function MovieSimilar({ id }: IMovieSimilarProps) {
               alt={similar.title}
             />
             <div>{similar.title}</div>
-            <div className={styles.name}>⭐{similar.vote_average}</div>
+            <div className={styles.name}>
+              ⭐{similar.vote_average.toFixed(1)}
+            </div>
           </div>
         ))}
       </div>
