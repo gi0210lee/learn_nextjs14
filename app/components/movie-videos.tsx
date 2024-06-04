@@ -7,9 +7,10 @@ interface IMovieVideos {
 
 export default async function MovieVideos({ id }: IMovieVideos) {
   const videos = await getVideos(id);
+  const top4 = videos.slice(0, 4);
   return (
     <div className={styles.container}>
-      {videos.map((video) => (
+      {top4.map((video) => (
         <iframe
           key={video.id}
           src={`https://youtube.com/embed/${video.key}`}
