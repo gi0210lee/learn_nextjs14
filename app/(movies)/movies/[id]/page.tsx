@@ -33,9 +33,9 @@ export default async function MovieDetailPage({ params: { id } }: IParams) {
         <MovieProviders id={id} />
       </Suspense>
 
-      {/* <Suspense fallback={<LoadingBar />}>
-              <MovieVideos id={id} />
-            </Suspense> */}
+      <Suspense fallback={<LoadingBar />}>
+        <MovieVideos id={id} />
+      </Suspense>
 
       <Suspense fallback={<LoadingBar />}>
         <MovieSimilar id={id} />
