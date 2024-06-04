@@ -7,20 +7,21 @@ interface IMovieCreditsProps {
 
 export default async function MovieCredits({ id }: IMovieCreditsProps) {
   const credits = await getCredits(id);
+  const top8 = credits.slice(0, 8);
   return (
     <div className={styles.container}>
       <div className={styles.title}>Credits</div>
-      <div className={styles.contents}>
-        {credits.map((credit) => (
-          <div className={styles.info} key={credit.id}>
-            <div className={styles.info_left}>
+      <div className={styles.grid}>
+        {top8.map((credit) => (
+          <div className={styles.grid_item} key={credit.id}>
+            <div className={styles.item_left}>
               <img
                 className={styles.poster}
                 src={credit.profile_path}
                 alt={credit.name}
               />
             </div>
-            <div className={styles.info_right}>
+            <div className={styles.item_right}>
               <div className={styles.character}>{credit.character}</div>
               <div className={styles.name}>{credit.name}</div>
             </div>

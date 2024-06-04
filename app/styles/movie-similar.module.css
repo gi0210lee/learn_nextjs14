@@ -1,0 +1,34 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+  margin-top: 100px;
+  /* padding-bottom: 100px; */
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.grid_item {
+}
+
+.poster {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.name {
+  opacity: 0.5;
+  font-size: 16px;
+}
